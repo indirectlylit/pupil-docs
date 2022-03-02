@@ -14,27 +14,27 @@ Finally, [workspaces](/invisible/explainers/basic-concepts/#workspaces) are used
 ## Recordings
 A recording starts and stops when you press the red record button in Pupil Invisible Companion App. While this should feel similar to recording a video, there is a lot more happening behind the scenes. When you are recording with Pupil Invisible Companion App, you are capturing not only video data but several more sensors (see [Data Streams](/invisible/explainers/data-streams)).
 
-Recordings are designed to be as robust as possible. If at any point a sensor is disconnected during a recording, it will automatically start capturing again as soon as it is reconnected. You could start a recording with no Pupil Invisible glasses connected and plug them in at a later time. As soon as they are connected, data will be captured.
+Recordings are designed to be as robust as possible. If at any point a sensor is disconnected during a recording, it will automatically start capturing again as soon as it is reconnected. You could start a recording with Pupil Invisible glasses completely unplugged from the Companion Device, and then later plug them in. As soon as they are connected, data will be captured.
 
-The Pupil Invisible Companion App has several more features to ensure a robust data collection and will e.g. warn you in case the Companion device's battery is running low or if you run out of storage space.
+The Pupil Invisible Companion App has several more features to ensure robust data collection. Example: If the Companion Device's battery is running low, or if you are running low on storage space the app will notify you.
 
 ## Wearers
-Wearers are the people wearing your Pupil Invisible glasses. In a typical study, each subject would be a wearer. Every recording you make is assigned to a wearer to help you organize your recordings. You can create new wearers on the fly in the Pupil Invisible Companion App or in advance in Pupil Cloud.
+Wearers are the people wearing the Pupil Invisible glasses. In a typical study, each subject would be a wearer. Every recording you make is assigned to a wearer. This will help you organize your recordings. You can create new wearers on the fly in the Pupil Invisible Companion App or in advance in Pupil Cloud.
 
-Every wearer is assigned a unique ID, such that you can edit the name and profile picture at any time without mixing up your recordings.
+Every wearer is assigned a unique ID. This means that you can edit the name and profile picture at any time without mixing up your recordings.
 
-In some cases, it can make sense to use the offset correction feature to compensate for systematic offsets in the predictions of individual wearers (see [Apply offset correction](/invisible/how-tos/tools/apply-offset-correction)). The offset you set will be saved in the wearer profile and applied to future recordings of this subject automatically.
+In some cases, it can make sense to use the offset correction feature to compensate for systematic offsets in the predictions of individual wearers (see [Apply offset correction](/invisible/how-tos/tools/apply-offset-correction)). The offset will be saved in the wearer profile and applied to future recordings of this subject automatically.
 
 
 ## Templates
-Templates are used to add meta-data to a recording (e.g. age, gender, or location). They are forms that can be filled out at recording time to document important information for your study. The responses will be saved alongside the recording. Further, templates define a naming scheme for recordings. If, for example, you add a field for the `Experiment Name` to the form, you can set this value to be added to your recording names automatically. This is useful if you have a pre-defined structure for your study.
+Templates are used to add meta-data to a recording (e.g. age, gender, or location). They are forms that can be filled out at recording time to document important information for your study. The responses will be saved alongside the recording. Further, templates define a naming scheme for recordings. For example, if you add a field for the `Experiment Name` to the form, you can set this value to be added to your recording names automatically. This is useful if you have a pre-defined structure for your study.
 
 ### Form for Meta-Data
-You can create new templates in Pupil Cloud and customize them to your use case. You can add as many form fields as you want, including text fields and multiple-choice fields.
+You can create new templates in Pupil Cloud and customize them to your use case. You can add as many form fields as you want, including text fields and multiple choice fields.
 
-You can set individual fields of the template to be "required", such that a recording can not be stopped before filling out those fields.
+You can set individual fields of the template to be "required", such that a recording can not be saved without filling out those fields.
 
-Before your templates become available for selection in the Pupil Invisible Companion app, you need to **publish** them. After they are published, they can no longer be edited to ensure consistency between responses.
+In order for your templates be available in the Pupil Invisible Companion app, you need to **publish** them. After they are published, they can no longer be edited. This is done in order to ensure consistency between responses.
 
 Some example use-cases for template forms include:
 
@@ -43,7 +43,9 @@ Some example use-cases for template forms include:
 - **Documenting the unplanned**: Data collection does not always go as planned. Sometimes a subject did not quite understand the instructions and sometimes something went wrong in the experiment workflow. Using templates you can immediately note down what happened and flag recordings that will require further inspection. This will be saved as part of the recording, so you do not have to keep a separate list of notes.
 
 ### Naming Scheme for Recordings 
-The only required field when creating a new template is the `Recording Name`, which determines the naming scheme of your recordings. Any text you type in this field will be included in the recording names. You can add form fields to the `Recording Name` as well, to include the corresponding values entered at recording time to the recording name. Additionally, you can add the following pre-defined elements to the name:
+The only required field when creating a new template is the `Recording Name`, which determines the naming scheme of your recordings. Any text you type in this field will be included in the recording names. 
+
+You can add form fields to the `Recording Name` as well, to include the corresponding values entered at recording time to the recording name. Additionally, you can add the following pre-defined elements to the name:
 
 - **template_name**: The name of this template.
 - **wearer_name**: The name of the current wearer.
@@ -66,14 +68,14 @@ In the `Recording Name` field of the template, we defined a naming scheme that c
 
 ## Projects
 
-A project is a group of recordings. You create projects from the Recordings view in Drive by selecting one or more recordings and clicking "create project from recording". You can also add projects to existing recordings.
+A project is a group of recordings. You create projects from the Recordings view in Drive by selecting one or more recordings and clicking "create project from recording". You can also add recordings to existing projects.
 
 Within a project, you can annotate recordings with events and create [enrichments](/invisible/explainers/enrichments) to power your analysis.
 
 ## Events
 You can annotate relevant points in time in your recordings using **Events**. An event is essentially a timestamp in a recording with an assigned name. You can use events to filter your data temporally to the sections that interest you. 
 
-You may for example want to mark when a certain stimulus became visible and disappeared again with events called `stimulus_start` and `stimulus_end`. Using those, you can filter your data to only consider samples for which the stimulus was present.
+For example, you might want to mark the point in time when a certain stimulus comes into view and then dissappears from view with events called `stimulus_start` and `stimulus_end`. Using those events, you can filter your data to only consider samples for which the stimulus was present.
 
 Events are also used for the definition of [enrichments](/invisible/explainers/enrichments) to indicate on what sections of your recordings they should be calculated.
 
